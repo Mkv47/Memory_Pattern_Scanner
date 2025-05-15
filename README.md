@@ -1,6 +1,6 @@
 # Memory Pattern Scanner
 
-A C++ tool designed for scanning process memory to detect specific byte patterns. Ideal for reverse engineering, debugging, and memory analysis.
+A C++ tool designed for scanning process memory on windows to detect specific byte patterns. Ideal for reverse engineering, debugging, and memory analysis.
 
 ## Features
 
@@ -14,8 +14,6 @@ A C++ tool designed for scanning process memory to detect specific byte patterns
 1. Build the project using your preferred C++ compiler (e.g., Visual Studio).  
 2. Run the executable with appropriate permissions to access target process memory.  
 3. Configure the pattern and process ID or name to scan against.  
-
-*Note: Specific usage instructions and examples will be added soon.*
 
 ## Technologies
 
