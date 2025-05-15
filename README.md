@@ -1,3 +1,30 @@
-# Memory_Pattern_Scanner
-This is a moduler script
-this is used to find a providerd memory pattern (serise of bytes e.g "4D 65 6D 6F 72 79 5F 50 61 74 74 65 72 6E 5F 53 63 61 6E 6E 65 72") inside a working application memory using a process ID.
+# Memory Pattern Scanner
+
+A C++ tool designed for scanning process memory to detect specific byte patterns. Ideal for reverse engineering, debugging, and memory analysis.
+
+## Features
+
+- Pattern-based memory scanning with wildcard support (`??`)  
+- Uses the Boyer-Moore algorithm for efficient pattern searching  
+- Real-time scanning of running processes  
+- Efficient and modular design for easy integration  
+
+## Usage
+
+1. Build the project using your preferred C++ compiler (e.g., Visual Studio).  
+2. Run the executable with appropriate permissions to access target process memory.  
+3. Configure the pattern and process ID or name to scan against.  
+
+*Note: Specific usage instructions and examples will be added soon.*
+
+## Technologies
+
+- C++  
+- WinAPI (for process and memory management)  
+- Boyer-Moore pattern searching algorithm  
+
+## Security and Ethics
+
+This tool is intended for educational and research purposes only. Unauthorized scanning or manipulation of software may violate terms of service or laws.
+
+Use responsibly and ethically.
