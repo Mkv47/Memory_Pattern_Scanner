@@ -8,7 +8,6 @@ std::vector<BYTE> hexStringToByteVector(const std::string& hex) {
     std::vector<BYTE> bytes;
     std::istringstream hex_stream(hex);
     std::string byte;
-    //std::cout << "Here 1" << std::endl;
     while (hex_stream >> byte) {
         if (byte == "?") {
             bytes.push_back(0xFF);
@@ -38,7 +37,6 @@ bool find_pattern_in_memory(const std::vector<BYTE>& buffer, const std::vector<B
     {
         size_t j = last;
 
-        // Compare pattern from end to beginning
         while (j != SIZE_MAX && (pattern[j] == 0xFF || buffer[i + j] == pattern[j])) {
             if (j == 0) {
                 found_offset = i;
@@ -67,7 +65,6 @@ void read_all_memory_once(DWORD processId, const std::vector<BYTE>& byte_pattern
     process_handle = OpenProcess(PROCESS_VM_READ | PROCESS_QUERY_INFORMATION, FALSE, processId);
     
     if (process_handle == NULL) {
-        //std::cerr << "Failed to open process handle. Error code: " << GetLastError() << std::endl;
         return;
     }
     MEMORY_BASIC_INFORMATION mbi;
@@ -109,7 +106,7 @@ int main()
 
     std::cout << "Enter process ID: ";
     std::cin >> processID;
-    std::cin.ignore(); // Clear leftover newline from input buffer
+    std::cin.ignore();
 
     std::cout << "Enter hex pattern (use '?' for wildcards, e.g. '8B 45 ? 89 45 FC'): ";
     std::getline(std::cin, pattern);
